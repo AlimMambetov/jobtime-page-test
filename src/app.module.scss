@@ -293,10 +293,13 @@ $decor-color: #34c759;
 			font-size: 14px;
 			color: #AEA8B5;
 			text-decoration: line-through;
+			white-space: nowrap;
 		}
 		[data-price=main]{
 			font-size: 36px;
 			font-weight: bold;
+			white-space: nowrap;
+
 		}
 		[data-price=days]{
 			font-size: 14px;
