@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const reviews = [
   {
     id: 1,
-    avatar: '/a-page/avatar1.png',
+    avatar: '/avatar1.png',
     stars: 5,
     name: "Sarah Johnson",
     job: "Frontend Developer, Austin",
@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     id: 2,
-    avatar: '/a-page/avatar2.png',
+    avatar: '/avatar2.png',
     stars: 5,
     name: "Michael Chen",
     job: "Product Manager, Remote",
@@ -25,7 +25,7 @@ const reviews = [
   },
   {
     id: 3,
-    avatar: '/a-page/avatar3.png',
+    avatar: '/avatar3.png',
     stars: 4,
     name: "Jessica Williams",
     job: "UX/UI Designer, New York",
@@ -35,7 +35,7 @@ const reviews = [
   },
   {
     id: 4,
-    avatar: '/a-page/avatar4.png',
+    avatar: '/avatar4.png',
     stars: 5,
     name: "David Rodriguez",
     job: "DevOps Engineer, Seattle",
@@ -45,7 +45,7 @@ const reviews = [
   },
   {
     id: 5,
-    avatar: '/a-page/avatar5.png',
+    avatar: '/avatar5.png',
     stars: 5,
     name: "Emily Foster",
     job: "Marketing Director, Chicago",
@@ -173,7 +173,7 @@ const ReviewSlider = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <img src="/a-page/arr-L.svg" alt="Previous" />
+          <img src="/arr-L.svg" alt="Previous" />
         </motion.button>
         <motion.button
           data-arr="next"
@@ -182,7 +182,7 @@ const ReviewSlider = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <img src="/a-page/arr-R.svg" alt="Next" />
+          <img src="/arr-R.svg" alt="Next" />
         </motion.button>
       </div>
 
@@ -247,7 +247,7 @@ const ReviewSlider = ({
                     initial="hidden"
                     animate="visible"
                   >
-                    <img src='/a-page/star.svg' alt="star" />
+                    <img src='/star.svg' alt="star" />
                   </motion.div>
                 ))}
               </div>
@@ -257,7 +257,7 @@ const ReviewSlider = ({
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
               >
-                <img src="/a-page/cursor.svg" alt="cursor" />
+                <img src="/cursor.svg" alt="cursor" />
                 Invited
               </motion.div>
             </div>
@@ -386,7 +386,7 @@ const CertBar = ({ title = '', text = '' }) => {
 
   return (<>
     <div className={cls.certbar}>
-      <img src="/a-page/cert.svg" />
+      <img src="/cert.svg" />
       <h4>{title}</h4>
       <p>{text}</p>
     </div>
@@ -438,7 +438,7 @@ function App() {
     <div className={cls.wrap}>
       <header className={cls.header}>
         <div className={cls.header__content}>
-          <img src="/a-page/main-logo.svg" alt="logo" />
+          <img src="/main-logo.svg" alt="logo" />
 
           <a href="#">LOG IN</a>
         </div>
@@ -465,15 +465,15 @@ function App() {
         </div>
 
         <div className={cls.reviews}>
-          <img src="/a-page/sec-bg.png" alt="bg" />
+          <img src="/sec-bg.png" alt="bg" />
           <h2 className={cls.reviews__title}>Reviews on {<img src='/a-page/logo.svg' alt='logo' />}</h2>
           <ReviewSlider {...sliderOps} />
         </div>
       </main>
 
       <footer className={cls.footer}>
-        <img src="/a-page/decor-line.png" alt="decor" />
-        <img src="/a-page/main-logo.svg" alt="logo" />
+        <img src="/decor-line.png" alt="decor" />
+        <img src="/main-logo.svg" alt="logo" />
         <p>Your Career Assistant. Artificial intelligence-enabled tools and resources that help you get a job 10 times faster</p>
         <p>All Rights Reserved ©2024 JobTime <br /> <a href="mailto:support@jobtime.ai" target='_blank'>support@jobtime.ai</a></p>
       </footer>
