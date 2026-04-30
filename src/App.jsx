@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import cls from './style.module.scss'
+import cls from './app.module.scss'
 import { motion, AnimatePresence } from 'framer-motion';
 
 const reviews = [
