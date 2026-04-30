@@ -466,7 +466,7 @@ function App() {
 
         <div className={cls.reviews}>
           <img src="/sec-bg.png" alt="bg" />
-          <h2 className={cls.reviews__title}>Reviews on {<img src='/a-page/logo.svg' alt='logo' />}</h2>
+          <h2 className={cls.reviews__title}>Reviews on {<img src='/logo.svg' alt='logo' />}</h2>
           <ReviewSlider {...sliderOps} />
         </div>
       </main>
