@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import cls from './app.module.scss'
+import cls from './style.module.scss'
 import { motion, AnimatePresence } from 'framer-motion';
 
 const reviews = [
   {
     id: 1,
-    avatar: '/avatar1.png',
+    avatar: '/a-page/avatar1.png',
     stars: 5,
     name: "Sarah Johnson",
     job: "Frontend Developer, Austin",
@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     id: 2,
-    avatar: '/avatar2.png',
+    avatar: '/a-page/avatar2.png',
     stars: 5,
     name: "Michael Chen",
     job: "Product Manager, Remote",
@@ -25,7 +25,7 @@ const reviews = [
   },
   {
     id: 3,
-    avatar: '/avatar3.png',
+    avatar: '/a-page/avatar3.png',
     stars: 4,
     name: "Jessica Williams",
     job: "UX/UI Designer, New York",
@@ -35,7 +35,7 @@ const reviews = [
   },
   {
     id: 4,
-    avatar: '/avatar4.png',
+    avatar: '/a-page/avatar4.png',
     stars: 5,
     name: "David Rodriguez",
     job: "DevOps Engineer, Seattle",
@@ -45,7 +45,7 @@ const reviews = [
   },
   {
     id: 5,
-    avatar: '/avatar5.png',
+    avatar: '/a-page/avatar5.png',
     stars: 5,
     name: "Emily Foster",
     job: "Marketing Director, Chicago",
@@ -173,7 +173,7 @@ const ReviewSlider = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <img src="/arr-L.svg" alt="Previous" />
+          <img src="/a-page/arr-L.svg" alt="Previous" />
         </motion.button>
         <motion.button
           data-arr="next"
@@ -182,7 +182,7 @@ const ReviewSlider = ({
           whileHover="hover"
           whileTap="tap"
         >
-          <img src="/arr-R.svg" alt="Next" />
+          <img src="/a-page/arr-R.svg" alt="Next" />
         </motion.button>
       </div>
 
@@ -247,7 +247,7 @@ const ReviewSlider = ({
                     initial="hidden"
                     animate="visible"
                   >
-                    <img src='/star.svg' alt="star" />
+                    <img src='/a-page/star.svg' alt="star" />
                   </motion.div>
                 ))}
               </div>
@@ -257,7 +257,7 @@ const ReviewSlider = ({
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
               >
-                <img src="/cursor.svg" alt="cursor" />
+                <img src="/a-page/cursor.svg" alt="cursor" />
                 Invited
               </motion.div>
             </div>
@@ -358,7 +358,7 @@ const Card = ({ head, title, text, price, oldPrice, days = 3, list = [], btnText
 
 
   return (<>
-    <div className={cls.card}>
+    <div id='card' className={cls.card}>
       <div className={cls.card__head}>{head}</div>
       <div className={cls.card__text}>
         <h3>{title}</h3>
@@ -386,7 +386,7 @@ const CertBar = ({ title = '', text = '' }) => {
 
   return (<>
     <div className={cls.certbar}>
-      <img src="/cert.svg" />
+      <img src="/a-page/cert.svg" />
       <h4>{title}</h4>
       <p>{text}</p>
     </div>
@@ -406,10 +406,10 @@ function App() {
 
   const cardOps = {
     head: '90% off',
-    title: 'PRO trial plan',
+    title: 'PRO Plan',
     text: "GET HIRED 2X FASTER",
     price: 5,
-    oldPrice: '15.00',
+    oldPrice: '49.99',
     days: 3,
     list: [
       "Apply up to 100 jobs/day",
@@ -420,12 +420,25 @@ function App() {
   }
 
 
+  const scrollToCard = () => {
+    const element = document.getElementById('card');
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - 200;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
 
   return (<>
     <div className={cls.wrap}>
       <header className={cls.header}>
         <div className={cls.header__content}>
-          <img src="/main-logo.svg" alt="logo" />
+          <img src="/a-page/main-logo.svg" alt="logo" />
 
           <a href="#">LOG IN</a>
         </div>
@@ -438,29 +451,29 @@ function App() {
             <Timer />
             <span>min : sec</span>
           </div>
-          <button className={cls.btn}>Get My Plan</button>
+          <button onClick={scrollToCard} className={cls.btn}>Get My Plan</button>
         </div>
         <div className={cls.head__lock}>🔒 save & secure • Powered by <span>stripe</span></div>
       </div>
       <main className={cls.main}>
         <div className={cls.content}>
           <CertBar title="Money-Back Guarantee" text="We commit to your career success. If you don't land an interview within 15 days, you get your money back." />
-          <h2 className={cls.title}>Try 3 days trial and <span>apply up to 300 jobs</span></h2>
+          <h2 className={cls.title}>Try PRO Plan and <span>apply up to 300 jobs daily</span></h2>
           <Card {...cardOps} />
-          <p data-p="desc">After 3 days, auto-renews at $145.00 $49.00 billed every 1 month. Cancel anytime.</p>
           <p data-p="link">I agree to the <a href="#">Terms of Use</a>, <a href="#">Refund Policy.</a></p>
+          <p data-p="desc">We value our customers and encourage you to review the documents above. Within 3 days, you’ll gain access to the full functionality of <a target='_blank' href="https://jobtime.ai">jobtime.ai</a>, which guarantees you responses to 300 job openings selected specifically for you based on your resume and the answers you provided earlier. This plan is a special offer for new customers and cannot be used more than once. Please upload only your own resume and avoid complex visual designs—this will allow us to extract the necessary information for the job more quickly. After 3 days, the plan auto-renews at $49.99, billed monthly. Cancel anytime. After successful payment, we will also offer you opportunities to improve your resume and cover letters. Don’t miss this opportunity.</p>
         </div>
 
         <div className={cls.reviews}>
-          <img src="/sec-bg.png" alt="bg" />
-          <h2 className={cls.reviews__title}>Reviews on {<img src='/logo.svg' alt='logo' />}</h2>
+          <img src="/a-page/sec-bg.png" alt="bg" />
+          <h2 className={cls.reviews__title}>Reviews on {<img src='/a-page/logo.svg' alt='logo' />}</h2>
           <ReviewSlider {...sliderOps} />
         </div>
       </main>
 
       <footer className={cls.footer}>
-        <img src="/decor-line.png" alt="decor" />
-        <img src="/main-logo.svg" alt="logo" />
+        <img src="/a-page/decor-line.png" alt="decor" />
+        <img src="/a-page/main-logo.svg" alt="logo" />
         <p>Your Career Assistant. Artificial intelligence-enabled tools and resources that help you get a job 10 times faster</p>
         <p>All Rights Reserved ©2024 JobTime <br /> <a href="mailto:support@jobtime.ai" target='_blank'>support@jobtime.ai</a></p>
       </footer>
