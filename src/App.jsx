@@ -424,7 +424,10 @@ function App() {
     const element = document.getElementById('card');
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - 265;
+
+      const margin = window.innerWidth < 600 ? 300 : 265;
+      const offsetPosition = elementPosition + window.pageYOffset - margin;
+
 
       window.scrollTo({
         top: offsetPosition,
