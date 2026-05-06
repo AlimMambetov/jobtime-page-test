@@ -1,0 +1,55 @@
+import { assetsSrc } from './config';
+
+
+export const reviews = [
+	{
+		id: 1,
+		avatar: `${assetsSrc}/avatar1.png`,
+		stars: 5,
+		name: "Sarah Johnson",
+		job: "Frontend Developer, Austin",
+		date: Date.now() - 1000 * 60 * 60 * 24 * 2,
+		title: "Landed my dream job in under 2 weeks",
+		review: "I've tried every job board out there, but this one is different. The matching algorithm actually understands my tech stack and preferences. I got 3 interview requests within the first 48 hours. Just signed an offer with a 50% salary increase. The application process is seamless — honestly a game changer for serious job seekers.",
+	},
+	{
+		id: 2,
+		avatar: `${assetsSrc}/avatar2.png`,
+		stars: 5,
+		name: "Michael Chen",
+		job: "Product Manager, Remote",
+		date: Date.now() - 1000 * 60 * 60 * 12,
+		title: "Transparent salary info changed everything",
+		review: "What I love most is that every job posting shows the actual salary range upfront. No more wasting time on vague descriptions or 'competitive pay' nonsense. I also appreciate the company reviews from real employees. Found my current role in less than a month and couldn't be happier with the culture fit.",
+	},
+	{
+		id: 3,
+		avatar: `${assetsSrc}/avatar3.png`,
+		stars: 4,
+		name: "Jessica Williams",
+		job: "UX/UI Designer, New York",
+		date: Date.now() - 1000 * 60 * 60 * 48,
+		title: "Great platform, especially for remote jobs",
+		review: "The remote job filter is the best I've seen — you can filter by timezone overlap and async-friendly companies. I received personalized recommendations that actually matched my design portfolio. The only small downside is that some listings get filled quickly, but that's because the platform works. Highly recommended!",
+	},
+	{
+		id: 4,
+		avatar: `${assetsSrc}/avatar4.png`,
+		stars: 5,
+		name: "David Rodriguez",
+		job: "DevOps Engineer, Seattle",
+		date: Date.now() - 1000 * 60 * 60 * 168,
+		title: "Recruiters reached out to me first",
+		review: "I just uploaded my resume and set my status to 'open to work' — within hours, legitimate recruiters started messaging me. No spam, just relevant opportunities. The skill verification badges helped me stand out. After 2 weeks of interviews, I accepted an offer that exceeded my expectations. Worth every minute I spent setting up my profile.",
+	},
+	{
+		id: 5,
+		avatar: `${assetsSrc}/avatar5.png`,
+		stars: 5,
+		name: "Emily Foster",
+		job: "Marketing Director, Chicago",
+		date: Date.now() - 1000 * 60 * 60 * 3,
+		title: "Finally found a job that respects work-life balance",
+		review: "The culture fit quiz was surprisingly accurate. It matched me with companies that value flexibility and mental health — something other platforms ignore. I also used the salary comparison tool to negotiate a better offer. This isn't just another job board; it's a career companion. Thank you to the team behind this!",
+	},
+];
