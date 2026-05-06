@@ -1,6 +1,6 @@
 
 import cls from './style.module.scss'
-
+import { assetsSrc } from './config';
 
 export const Card = ({ head, title, text, oldMonthPrice, monthPrice, months = 1, price, oldPrice, days = 3, list = [], btnText = 'Get My Plan', foot, onClick, disabled }) => {
 
@@ -14,7 +14,7 @@ export const Card = ({ head, title, text, oldMonthPrice, monthPrice, months = 1,
 				<p>{text}</p>
 				<div className={cls.card__month}>
 					<span>${oldMonthPrice}{monthsActive ? <>/{months} months</> : ' total'} </span>
-					→
+					<img width={20} src={`${assetsSrc}/arrow.svg`} alt="arrow" />
 					<b>${monthPrice}/{monthsActive ? <>{months} months</> : ' month'}</b>
 				</div>
 				<div className={cls.card__price}>

@@ -265,6 +265,13 @@ $decor-color: #34c759;
 		.card__list{
 			background-color: #e8e1fc;
 		}
+
+		.card__month{
+			
+			@media(max-width: 400px){
+				font-size: 12px;
+			}
+		}
 	}
 
 
@@ -305,6 +312,12 @@ $decor-color: #34c759;
 		align-items: center;
 		gap: 8px;
 		font-size: 15px;
+		white-space: nowrap;
+		*{
+		white-space: nowrap;
+		}
+
+
 
 		span{
 			font-weight: 300;
@@ -336,6 +349,7 @@ $decor-color: #34c759;
 		position: relative;
 		height: 100%;
 		
+		
 		[data-price=old]{
 			position: absolute;
 			left: 50%;top: 0;
@@ -349,9 +363,17 @@ $decor-color: #34c759;
 			font-size: 40px;
 			font-weight: bold;
 			white-space: nowrap;
+			
+			@media(max-width: 400px){
+				font-size: 35px;
+			}
 		}
 		[data-price=days]{
 			font-size: 16px;
+
+			@media(max-width: 400px){
+				font-size: 14px;
+			}
 		}
 	}
 
