@@ -71,7 +71,7 @@ function APage() {
         </div>
       </header>
       <div className={cls.head}>
-        <div className={cls.head__line}>🎉 Personal discount — 90%</div>
+        <div className={cls.head__line}>🎉 Personal discount — 50%</div>
         <div className={cls.head__content}>
           <div className={cls.head__timer}>
             <p>Discount expires in</p>
@@ -85,7 +85,7 @@ function APage() {
       <main className={cls.main}>
         <div className={cls.content}>
           <CertBar title="Money-Back Guarantee" text="We commit to your career success. If you don't land an interview within 15 days, you get your money back." />
-          <h2 className={cls.title}>Try PRO Plan and <span>apply up to 300 jobs daily</span></h2>
+          <h2 className={cls.title}>From No Response <span>to Dream Job</span></h2>
           <div className={cls.tariffs}>
             {tariffs.map((el, i) => <Card btnText={isPaying ? "Loading..." : el.btnText} disabled={isPaying || !planId} onClick={handleGetMyPlan} {...el} key={i} />)}
           </div>
@@ -104,7 +104,7 @@ function APage() {
         <img src={`${assetsSrc}/decor-line.png`} alt="decor" />
         <img src={`${assetsSrc}/main-logo.svg`} alt="logo" />
         <p>Your Career Assistant. Artificial intelligence-enabled tools and resources that help you get a job 10 times faster</p>
-        <p>All Rights Reserved ©2024 JobTime <br /> <a href="mailto:support@jobtime.ai" target='_blank'>support@jobtime.ai</a></p>
+        <p>All Rights Reserved ©2024 JobTime <br /> <a href="mailto:hello@jobtime.ai" target='_blank'>hello@jobtime.ai</a></p>
       </footer>
     </div>
   </>)
